@@ -1,0 +1,82 @@
+:root {
+  // 主题字体颜色
+  --main-main-fcolor: #181818;
+  // 主题字体颜色 微浅
+  --main-default-fcolor: #999999;
+  // 背景底色
+  --main-default-bg: #f5f5f5;
+  // 默认边距
+  --main-padding-16: 16px;
+
+  // 主题色
+  --main-main-color: #08366a;
+
+  // 主题边框颜色
+  --main-border-color: #dcdfe6;
+
+  // 头部导航栏高度
+  --main-header-height: 56px;
+  // 头部背景色
+  --main-header-bg: #ffffff;
+
+  // tab高度
+  --main-tab-height: 40px;
+
+  // 侧边栏宽度
+  --main-side-width: 220px;
+  // 侧边栏背景色
+  --main-side-bg: linear-gradient(101deg, #184c80 0%, #042952 13%, #052f5c 31%, #174a7d 52%, #1c5590 69%, #052e5c 100%);
+  // 侧边栏选中字体颜色
+  --main-side-active-fcolor: var(--main-main-color);
+  // 侧边栏字体颜色
+  --main-side-fcolor: #ffffff;
+  // 侧边栏选中背景色
+  --main-side-active-bg: #ffffff;
+  --main-side-hover-bg: rgba(246, 248, 251, 0.16);
+
+  // collapse height
+  --main-side-collapse-height: 40px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-align-center {
+  @extend .flex;
+  align-items: center;
+}
+
+.flex-center {
+  @extend .flex-align-center;
+  justify-content: center;
+}
+
+.flex-between {
+  @extend .flex;
+  justify-content: space-between;
+}
+
+.link-text {
+  cursor: pointer;
+}
+
+.middle-icon {
+  vertical-align: middle;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.inset-0 {
+  inset: 0rem;
+}

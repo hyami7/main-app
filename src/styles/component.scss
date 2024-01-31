@@ -1,0 +1,52 @@
+// 修改 element css 变量
+:root {
+  // 修改menu item高度
+  // --smain-menu-item-height: 40px;
+}
+
+// 菜单背景色
+.smain-menu-item.is-active {
+  background: var(--main-side-active-bg) !important;
+}
+.smain-menu-item.is-active:hover {
+  color: var(--main-side-fcolor);
+}
+
+.smain-menu-item:hover {
+  background: var(--main-side-hover-bg) !important ;
+}
+
+// 图标
+.smain-sub-menu .icon,
+.smain-menu-item .icon {
+  font-size: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+// 缩小时二级菜单背景色
+.smain-menu--popup {
+  background: var(--main-side-bg);
+}
+
+// 后续修改menu item样式
+// .smain-menu-item,
+// .smain-sub-menu__title,
+// .smain-sub-menu .smain-menu-item {
+// border-radius: 2px;
+// margin: 4px 12px;
+// position: relative;
+// }
+// .smain-sub-menu__title {
+// --smain-menu-main-level-padding: 20px;
+// }
+// .smain-menu {
+// user-select: none;
+// }
+
+// .smain-form-item {
+// margin-bottom: 20px;
+// }

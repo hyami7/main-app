@@ -1,0 +1,51 @@
+$name-space: 'main-'; /* 根据需要自定义命名空间 */
+$element-separator: '__';
+$modifier-separator: '--';
+
+@function containsSeparator($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, $modifier-separator) or str-index($selector, $element-separator) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@mixin B($block) {
+  $B: #{$name-space + $block} !global;
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin b($block) {
+  $B: $block !global;
+  .#{$block} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  $E: $element !global;
+  @if containsSeparator(&) {
+    @at-root {
+      & #{'.' + $B + $element-separator + $element} {
+        @content;
+      }
+    }
+  } @else {
+    @at-root {
+      #{& + $element-separator + $element} {
+        @content;
+      }
+    }
+  }
+}
+@mixin m($modifier) {
+  @at-root {
+    #{& + $modifier-separator + $modifier} {
+      @content;
+    }
+  }
+}
